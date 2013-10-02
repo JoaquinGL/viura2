@@ -4,7 +4,7 @@ Plugin Name: Secure HTML5 Video Player
 Plugin URI: http://www.trillamar.com/webcraft/secure-html5-video-player/
 Description: An enhanced video plugin for WordPress built on the VideoJS HTML5 video player library.  Settings can be easily configured with a control panel and simplified short codes.  Video files can be served from a secured private directory. 
 Author: Lucinda Brown, Jinsoo Kang
-Version: 3.0
+Version: 3.1
 Author URI: http://www.trillamar.com/
 License: LGPLv3
 */

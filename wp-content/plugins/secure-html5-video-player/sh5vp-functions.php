@@ -3,7 +3,42 @@
 if (!class_exists('SH5VP_S3')) require_once 's3/S3.php';
 
 $secure_html5_video_player_s3 = NULL;
+
+
+
+if ( !function_exists('secure_html5_video_player_s3_link_expire_seconds') ):
+function secure_html5_video_player_s3_link_expire_seconds() {
+	$transient_key = 'sh5vp:s3:link_expire';
+	$exists = secure_html5_video_player_get_transient($transient_key);
+	if ($exists !== FALSE) {
+		return $exists;
+	}
+	$retval = 28800;
+	$secure_html5_video_player_s3_link_expire = get_option('secure_html5_video_player_s3_link_expire');
+	$secure_html5_video_player_s3_link_expire_units = get_option('secure_html5_video_player_s3_link_expire_units');
+	if (!$secure_html5_video_player_s3_link_expire) {
 $secure_html5_video_player_s3_link_expire = 28800;
+	}
+	else {
+		$secure_html5_video_player_s3_link_expire = floatval($secure_html5_video_player_s3_link_expire);
+	}
+	if (!$secure_html5_video_player_s3_link_expire_units) {
+		$secure_html5_video_player_s3_link_expire_units = 'seconds';
+	}
+	if ($secure_html5_video_player_s3_link_expire_units == 'hours') {
+		$retval = $secure_html5_video_player_s3_link_expire * 3600;
+	}
+	else if ($secure_html5_video_player_s3_link_expire_units == 'days') {
+		$retval = $secure_html5_video_player_s3_link_expire * 86400;
+	}
+	else if ($secure_html5_video_player_s3_link_expire_units == 'minutes') {
+		$retval = $secure_html5_video_player_s3_link_expire * 60;
+	}
+	$retval = intval(abs(round($retval)));
+	secure_html5_video_player_set_transient($transient_key, $retval);
+	return $retval;
+}
+endif;
 
 
 
@@ -15,11 +50,25 @@ function secure_html5_video_player_options_form_s3() {
 	$secure_html5_video_player_s3_server = get_option('secure_html5_video_player_s3_server');
 	$secure_html5_video_player_s3_bucket = get_option('secure_html5_video_player_s3_bucket');
 	$video_dir = secure_html5_video_player_s3_video_dir();
+	$secure_html5_video_player_s3_link_expire = get_option('secure_html5_video_player_s3_link_expire');
+	$secure_html5_video_player_s3_link_expire_units = get_option('secure_html5_video_player_s3_link_expire_units');
+	if (!$secure_html5_video_player_s3_link_expire) $secure_html5_video_player_s3_link_expire = 8;
+	if (!$secure_html5_video_player_s3_link_expire_units) $secure_html5_video_player_s3_link_expire_units = 'hours';
 	
 	$s3_servers = array(
-		's3.amazonaws.com', 'Amazon S3 (s3.amazonaws.com)',
+		's3.amazonaws.com', 'Amazon S3: US Standard (s3.amazonaws.com)',
+		's3-eu-west-1.amazonaws.com', 'Amazon S3: Ireland (s3-eu-west-1.amazonaws.com)',
+		's3-us-west-1.amazonaws.com', 'Amazon S3: Northern California (s3-us-west-1.amazonaws.com)',
+		's3-us-west-2.amazonaws.com', 'Amazon S3: Oregon (s3-us-west-2.amazonaws.com)',
+		's3-sa-east-1.amazonaws.com', 'Amazon S3: Sau Paulo (s3-sa-east-1.amazonaws.com)',
+		's3-ap-southeast-1.amazonaws.com', 'Amazon S3: Singapore (s3-ap-southeast-1.amazonaws.com)',
+		's3-ap-southeast-2.amazonaws.com', 'Amazon S3: Sydney (s3-ap-southeast-2.amazonaws.com)',
+		's3-ap-northeast-1.amazonaws.com', 'Amazon S3: Tokyo (s3-ap-northeast-1.amazonaws.com)',
 		'objects.dreamhost.com', 'DreamObjects (objects.dreamhost.com)',
 		'other', 'Other:'
+	);
+	$s3_time_units = array(
+		'days', 'hours', 'minutes', 'seconds'
 	);
 	?>
 	<input type='checkbox' value="yes" id="secure_html5_video_player_enable_s3" name='secure_html5_video_player_enable_s3' <?php print $secure_html5_video_player_enable_s3 ?> />
@@ -33,13 +82,14 @@ function secure_html5_video_player_options_form_s3() {
 		var server_other = jQuery("#secure_html5_video_player_s3_server_other");
 		if (server_sel.val() == "other") {
 			server_other.css({
-				"visibility":"visible"
+				"display":"inline"
 			});
 		}
 		else {
 			server_other.css({
-				"visibility":"hidden"
+				"display":"none"
 			});
+			server_other.val(server_sel.val());
 		}
 	'>
 		<?php 
@@ -56,11 +106,12 @@ function secure_html5_video_player_options_form_s3() {
 				?><option <?php echo $sel; ?> value="<?php echo $s3_servers[$i]; ?>"><?php echo $s3_servers[$i+1]; ?></option><?php
 			}
 		?>
-	</select><input type='text' name='secure_html5_video_player_s3_server_other' id='secure_html5_video_player_s3_server_other' value='<?php echo $secure_html5_video_player_s3_server; ?>' 
+	</select><input type='text' size='50' name='secure_html5_video_player_s3_server_other' id='secure_html5_video_player_s3_server_other' value='<?php echo $secure_html5_video_player_s3_server; ?>' 
 	<?php if (! $is_other_server) { ?>
-		style="visibility:hidden;"
+		style="display:none;"
 	<?php } ?>
-	/><br/><br/>
+	/><br/>
+	<small><?php _e('The server selected muct match the region in which the bucket was created. If you do not see the correct region or server listed here, select [other] and input the correct S3 server address.', 'secure-html5-video-player'); ?></small><br/><br/>
 
 	<label class="title" for='secure_html5_video_player_s3_access_key'><?php _e('Access Key', 'secure-html5-video-player'); ?></label><br/>
 	<input type='text' id="secure_html5_video_player_s3_access_key" name='secure_html5_video_player_s3_access_key'  size='50' value='<?php echo $secure_html5_video_player_s3_access_key ?>' /><br/><br/>
@@ -69,11 +120,25 @@ function secure_html5_video_player_options_form_s3() {
 	<input type='text' id="secure_html5_video_player_s3_secret_key" name='secure_html5_video_player_s3_secret_key'  size='50' value='<?php echo $secure_html5_video_player_s3_secret_key ?>' /><br/><br/>
 	
 	<label class="title" for='secure_html5_video_player_s3_bucket'><?php _e('S3 Bucket', 'secure-html5-video-player'); ?></label><br/>
-	<input type='text' id="secure_html5_video_player_s3_bucket" name='secure_html5_video_player_s3_bucket'  size='50' value='<?php echo $secure_html5_video_player_s3_bucket ?>' /><br/><br/>
+	<input type='text' id="secure_html5_video_player_s3_bucket" name='secure_html5_video_player_s3_bucket'  size='50' value='<?php echo $secure_html5_video_player_s3_bucket ?>' /><br/>
+	<small><?php _e('The bucket must reside in the S3 server previously specified. ', 'secure-html5-video-player'); ?></small><br/><br/>
 
 	<label class="title" for='secure_html5_video_player_s3_video_dir'><?php _e('S3 Video Directory', 'secure-html5-video-player'); ?></label><br/>
 	<input type='text' id="secure_html5_video_player_s3_video_dir" name='secure_html5_video_player_s3_video_dir'  size='50' value='<?php echo $video_dir ?>' /><br/>
 	<small><?php _e('The directory path in the bucket where the videos are stored. This directory should be made private if you wish to secure your videos. ', 'secure-html5-video-player'); ?></small><br/><br/>
+
+	<label class="title" for='secure_html5_video_player_s3_link_expire'><?php _e('S3 Media Lifespan', 'secure-html5-video-player'); ?></label><br/>
+	<input type='text' id="secure_html5_video_player_s3_link_expire" name='secure_html5_video_player_s3_link_expire'  size='10' value='<?php echo $secure_html5_video_player_s3_link_expire ?>' /><select id='secure_html5_video_player_s3_link_expire_units' name='secure_html5_video_player_s3_link_expire_units'><?php 
+			$count_s3_time_units = count($s3_time_units);
+			for ($i = 0; $i < $count_s3_time_units; $i++) {
+				$sel = '';
+				if ($secure_html5_video_player_s3_link_expire_units == $s3_time_units[$i]) {
+					$sel = ' selected="selected" ';
+				}
+				?><option <?php echo $sel; ?> value="<?php echo $s3_time_units[$i]; ?>"><?php echo $s3_time_units[$i]; ?></option><?php
+			}
+	?></select><br/>
+	<small><?php _e('The amount of time that the visitor is granted access to the media served from S3.', 'secure-html5-video-player'); ?></small><br/><br/>
 	<?php
 }
 endif;
@@ -162,7 +227,6 @@ endif;
 
 if ( !function_exists('secure_html5_video_player_s3_media_exists') ):
 function secure_html5_video_player_s3_media_exists($filename) {
-	global $secure_html5_video_player_s3_link_expire;
 	$video_dir = secure_html5_video_player_s3_video_dir();
 	$secure_html5_video_player_s3 = secure_html5_video_player_s3_object();
 	$secure_html5_video_player_s3_bucket = get_option('secure_html5_video_player_s3_bucket');
@@ -187,7 +251,7 @@ function secure_html5_video_player_s3_media_exists($filename) {
 		$link = $secure_html5_video_player_s3->getAuthenticatedURL(
 			$secure_html5_video_player_s3_bucket, 
 			$curr_s3_vid, 
-			$secure_html5_video_player_s3_link_expire, 
+			secure_html5_video_player_s3_link_expire_seconds(), 
 			FALSE, // hostBucket
 			TRUE // request https url
 		);
@@ -697,6 +761,9 @@ function secure_html5_video_player_install() {
 	add_option('secure_html5_video_player_s3_bucket', '');
 	add_option('secure_html5_video_player_s3_video_dir', 'videos/');
 	
+	add_option('secure_html5_video_player_s3_link_expire', '8');
+	add_option('secure_html5_video_player_s3_link_expire_units', 'hours');
+	
 	add_action('widgets_init', 'secure_html5_video_player_widgets_init' );
 }
 endif;
@@ -729,6 +796,9 @@ function secure_html5_video_player_uninstall() {
 	delete_option('secure_html5_video_player_s3_server');
 	delete_option('secure_html5_video_player_s3_bucket');
 	delete_option('secure_html5_video_player_s3_video_dir');
+
+	delete_option('secure_html5_video_player_s3_link_expire');
+	delete_option('secure_html5_video_player_s3_link_expire_units');
 }
 endif;
 
@@ -841,6 +911,14 @@ function update_secure_html5_video_player_options() {
 	if (isset($_REQUEST['secure_html5_video_player_s3_video_dir'])) {
 		update_option('secure_html5_video_player_s3_video_dir', $_REQUEST['secure_html5_video_player_s3_video_dir']);
 	}
+
+	if (isset($_REQUEST['secure_html5_video_player_s3_link_expire'])) {
+		update_option('secure_html5_video_player_s3_link_expire', $_REQUEST['secure_html5_video_player_s3_link_expire']);
+	}
+	if (isset($_REQUEST['secure_html5_video_player_s3_link_expire_units'])) {
+		update_option('secure_html5_video_player_s3_link_expire_units', $_REQUEST['secure_html5_video_player_s3_link_expire_units']);
+	}
+
 }
 endif;
 

@@ -2,10 +2,10 @@
 Contributors: Lucinda Brown, Jinsoo Kang
 Tags: html5, video, player, secure, javascript, m4v, mp4, ogg, ogv, theora, webm, flowplayer, skins, media server, youtube, vimeo, amazon, s3
 Requires at least: 3.0
-Tested up to: 3.5.2
-Stable tag: 3.0
+Tested up to: 3.6.1
+Stable tag: 3.1
 
-Secure HTML5 Video Player allows you to play HTML5 video on modern browsers. Videos can be served privately; pseudo-streamed from a secured directory.
+Secure HTML5 Video Player allows you to play HTML5 video on modern browsers. Videos can be served privately; pseudo-streamed from a secured directory or via S3.
 
 == Description ==
 
@@ -112,8 +112,14 @@ Video Shortcode Examples
 5. Shortcode options and examples
 6. Post or page featured video interface
 7. Widget interface
+8. S3 settings
 
 == Changelog ==
+
+= 3.1 =
+* Added ability to set the duration time for S3 media lifespan.
+* Expanded the S3 server list for current Amazon S3 global regions. Note: The S3 server must be specified to the one that matches the region of the bucket.
+* Added additional help text in the S3 settings tab.
 
 = 3.0 =
 * Added support for Amazon S3 (and compatible file services) for video file storage and secured video serving.
@@ -167,6 +173,9 @@ Video Shortcode Examples
 
 == Upgrade Notice ==
 
+= 3.1 =
+Added ability to set the duration time for S3 media lifespan. Expanded the S3 server list for current Amazon S3 global regions. Note: The S3 server must be specified to the one that matches the region of the bucket. Added additional help text in the S3 settings tab.
+
 = 3.0 =
 Added support for Amazon S3 (and compatible file services) for video file storage and secured video serving.  Fixed an issue where uppercase file extension videos were not recognized. Optimized temporary value cache to use APC, if available.
 
@@ -202,13 +211,30 @@ First release
 
 = Why isn't it working in Firefox? =
 	
-On Firefox, you'll have to convert the mp4 file to OGV format to get it to play in HTML5 video format. See: <a href="http://diveintohtml5.info/video.html" target="_blank">http://diveintohtml5.info/video.html</a> for more information.
+Firefox currently does not support the MPEG4/h.264 video format that most other browsers and devices support.  Most versions of Firefox support the OGV (Ogg Vorbis Theora) video format, and some versions support the WEBM video format.  To achieve the greatest amount of compatiblity, you must provide videos in both OGV and MP4.  (WEBM is not necessary because every browser that supports WEBM playback supports one of the other video formats as well.)  The plugin automatically detects the presence of multiple video file formats as long as they have the same file name (differing by file extension), and as long as they're placed in the same video directory location of whatever way you're serving the videos.  If you're self serving the a video named "myvid.mp4" from a directory, you'll want to have the short code be:
 
-= Why isn't it working in IE or Safari? =
+[video file="myvid"]
 
-If your video is not playing in IE 8, then its likely your mp4 file is not in the proper encoding scheme compatible with HTML5 video. It has to be in h.264 format. See: <a href="http://diveintohtml5.info/video.html" target="_blank">http://diveintohtml5.info/video.html</a> for more information. 
+and then you will need to:
+1. Make sure the MP4 video is encoded as "MPEG4/h.264".  There are other types of MPEG4, but only this one type is defined as the video supported codec supported by HTML5 compliant browsers.
+2. Create an OGV version of the video using your favorite video conversion program. (We usually use Miro Video Converter).
+3. Place the OGV video in the same video directory as the MP4 file, and name it "myvid.ogv"
+4. Make a placeholder image in PNG or JPEG format. We usually take a capture of the representative frame of the video.
+5. Name the PNG or JPEG placeholder image: "myvid.png" or "myvid.jpg", respectively, and place it in the same video directory.
+6. Test the page where you input the short code and make sure the video plays on all browsers.  
 
-= How do I secure my videos? =
+= Why isn't it working in IE? =
 
-We use the Secure HTML5 Video Player with another plugin, cart66, that handles access to the pages that have the videos. That way, only members can see the videos. Another option is to password protect the post where the video short-tag is used.  We personally don't have a problem with them saving the mp4, if they are on a page that they are allowed to be on. For some, it could be a feature. 
+If your video is not playing in IE, then its likely your mp4 file is not in the proper encoding scheme compatible with HTML5 video. It has to be in MP4/h.264 format. See: <a href="http://diveintohtml5.info/video.html" target="_blank">http://diveintohtml5.info/video.html</a> for more information. 
 
+= Why isn't it working in Safari? =
+
+Besides the requirement of the video being MP4/h.264 format, some versions of Safari, especially those running on iOS, have limitations placed on the maximum allowed framerate for the video encoding.  This is because the decoding is done using a specialized processor in the device with a given, set limitation.  As a rule of thumb, 30 FPS should not be exceeded in the encoding process.  If there are device presets available in the video encoding software (as there is in Handbrake, Miro, or Adobe Video Encoder), utilizing those presets would ensure compatibility.
+
+= How do I secure my videos? Are they really secure? =
+
+We use the Secure HTML5 Video Player in conjunction with another plugin that handles user accounts and page permissions granted to specific users. If the user has access to a page, they then have access to the video embedded on that page with a secure, randomized access URL created at the moment the page is served.  The URL to the media acts as a temporary license for viewing the video on the page for a set limited amount of time.  In this way, only members can see the videos, and non-members will not know how to access the videos, even if they know the file names.
+
+Another option is to use the built in features of Wordpress to password protect the post where the video short-tag is used.  
+
+Although this means that users that are granted access to a page have download permission for the videos in question, that would be the case for any video embedding technology, and certainly is the case for every HTML5 embedded video.  Anything that can be played on a computer screen can be recorded to a digital file for later playback with the right software or plugin.  We personally don't have a problem with them saving the mp4, if they are on a page that they are allowed to be on. For some websites, this could be viewed as a desirable feature. 
