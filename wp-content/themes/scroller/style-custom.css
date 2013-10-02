@@ -403,12 +403,17 @@ font-size: 1.9em;
 }
 
 #inlineBlocks div {
+	 border: 2px solid #C8AEC4;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 5px #C8AEC4;
     float: left;
     margin-left: 30px;
 }
 #inlineBlocks div a {
-    color:white;
+    color:#000;
 }
+
+#inlineBlocks div a br{display:none;}
 
 /*SLIDERS GALERIA DE FOTOS*/
 
