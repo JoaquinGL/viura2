@@ -58,7 +58,8 @@
 
 
 /*TITLE*/
-#Informacion h2 {font-size:4.0em;  line-height: 1em !important;}
+#Informacion h2 {font-size:4.0em;  line-height: 1em !important; margin-right: 35px;
+    text-align: right;}
 
 
 
