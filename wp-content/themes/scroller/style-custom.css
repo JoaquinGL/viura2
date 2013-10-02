@@ -1,0 +1,416 @@
+.slider_full {display:none;}
+
+#home{ 
+	background:url("http://www.ingenieriawebtv.com/ProyectoViura2/wp-content/uploads/2013/09/viura_1_3.jpg") no-repeat scroll 0 center transparent;
+	background-size:100% auto;
+}
+
+#home .slides{display:none;}
+
+#sismica3D .hoverstuff-link{display:none;}
+
+.logo_bottom{
+	float: left;
+    	width: 40%;
+}
+
+#header_bottom{ 
+	 background-color: rgba(130, 24, 84, 0.6);
+    	opacity: 1;
+    	width: 100%;}
+
+.stuff,
+#header_bottom{ height:140px; bottom:0px; } /* slider + logo section height */
+
+.stuff .flexhead{ height:110px; }
+
+.logo_bottom img{height:100px;}
+
+#servicesbox li p{ height:190px; overflow:hidden; }
+
+#servicesbox li{ overflow: hidden; padding-top: 20px;}
+
+#servicesbox li:hover{ background: #e1f0fa;}
+
+.section_template h2 { color:#fff !important; text-shadow:1px 1px 0 #000}
+
+.container_block{padding-top:100px !important; margin-bottom:40px !important;}
+
+
+/*NAVIGATION*/
+.inversorsContent
+{     
+	margin: 0 auto;
+    	overflow: hidden;
+   	width: 85%;
+	min-height:100px;
+	margin-top:30px;
+}
+
+.inversorsContent li 
+{ 
+    float: left;
+    margin-left: 20px;
+    min-width: 200px;
+    width: 30%;
+}
+.inversorsContent img {width:100%;}
+
+
+/*TITLE*/
+#Informacion h2 {font-size:4.0em;  line-height: 1em !important;}
+
+
+
+.section .title-image-over{
+  text-align: center; 
+  color: #ffffff;
+}
+
+#display-none
+{
+	display:none;
+}
+
+.slides h2 a {line-height:1.2em;}
+
+
+/*SEGUIMIENTO*/
+#seguimiento h2 {display:none;}
+
+
+/*Titulos grandes*/
+
+#plantaOperaciones h2,
+#pipeline h2, 
+#pipelineExportation h2, 
+#torresElectricas h2, 
+#imagesGallery h2, 
+#videoGallery h2,
+#infography h2,
+#contact h2 {
+	font-size:4.0em;
+	line-height:1em !important;
+}
+
+#torresElectricas h2
+{
+	line-height: 1.2em !important;
+}
+
+#servicesbox p {display:none;}
+
+#servicesbox li{ margin:0 auto !important; float:none !important;}
+
+/*LanguageList*/
+#LanguageList
+{
+	position: absolute; 
+	right: 20px;
+	padding-top:12px;
+}
+
+#LanguageList li
+{
+	float:left;
+	margin-left:10px;
+}
+#LanguageList li a {font-size:0.8em;}
+
+
+/*CUSTOM GALLERY*/
+
+.customGallery #servicesbox li {padding-top:0;}
+.customGallery h3{padding:25px 0 12px;}
+.customBorders{border-radius:5px 5px 10px 10px}
+
+#pozoV1 .gallery,
+#pozoV3 .gallery
+{
+    padding-left: 5px;
+    width: 48%;
+}
+
+.customLoop br{display:none;}
+
+/*WOWSLIDER*/
+
+a[href$="http://wowslider.com"]
+{
+	display:none!important;
+}
+.ws_playpause { display:none !important;}
+
+
+/*VIDEO GALLERY*/
+.wpvl_auto_thumb_box_wrapper{ float:left;margin-left:10px;}
+.videoBlock-4 { margin: 10px 0 0 55px; overflow: hidden;}
+
+
+
+/*custom ImageHD*/
+
+.customimageHD li
+{
+	float:none;
+	margin:0 auto;
+}
+
+.customimageHD .imgwrap
+{
+	width:100%;
+}
+
+.customimageHD .imgwrap a,
+.customimageHD .imgwrap .wp-post-image{
+	width:100%;
+	max-width:100%;
+}
+
+.customimageHD br{ display:none;}
+
+
+
+
+.video_lightbox_auto_anchor_image{ background-color:transparent;}
+
+.videoBlock-4 .wpvl_auto_thumb_box
+{
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.videoBlock-4 .firstBlock .wpvl_auto_thumb_box{background-image:url("https://secure-b.vimeocdn.com/ts/419/488/419488745_640.jpg");}
+.videoBlock-4 .secondBlock .wpvl_auto_thumb_box{background-image:url("https://secure-b.vimeocdn.com/ts/420/001/420001019_640.jpg");}
+.videoBlock-4 .thirdBlock .wpvl_auto_thumb_box{background-image:url("https://secure-b.vimeocdn.com/ts/411/471/411471328_640.jpg");}
+.videoBlock-4 .fourthBlock .wpvl_auto_thumb_box{background-image:url("https://secure-b.vimeocdn.com/ts/441/804/441804655_640.jpg");}
+
+
+#servicesbox h3 {padding-top:0}
+
+
+::selection {
+        background:#831454 !important; 
+		color:#fff;
+        }
+::-moz-selection {
+        background:#831454;
+		color:#fff;
+}
+
+
+@media screen and (max-width: 480px) {
+	#Informacion h2 {font-size:2.4em !important;  line-height: 1em !important;}
+#plantaOperaciones h2,
+#pipeline h2, 
+#pipelineExportation h2, 
+#torresElectricas h2, 
+#imagesGallery h2, 
+#videoGallery h2,
+#infography h2,
+#contact h2 {
+	font-size:2.5em !important;
+	line-height:1em !important;
+}
+
+#nav li{background-color:white}
+
+
+#LanguageList{
+	position: absolute;
+	right: 20px;
+	padding-top: 200px;}
+}
+
+.item_blog .imgwrap {
+    margin-bottom: 60px;
+    margin-top: 20px;
+    max-width: 130px !important;
+}
+
+.oneBox .item_blog .imgwrap {
+    margin:0 !important; 
+	left:0;
+    max-width: 100% !important;
+}
+
+@media screen and (max-width: 1024px)
+{
+	#navigation {width:80%;}
+	#header .container {
+    		width: 47%;
+	}
+	#navigation {
+   		width: 520px;
+	}
+	#header h1 {
+    		left: -180px;
+	}
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+	#Informacion h2 {font-size:3.0em;  line-height: 1em !important;}
+#plantaOperaciones h2,
+#pipeline h2, 
+#pipelineExportation h2, 
+#torresElectricas h2, 
+#imagesGallery h2, 
+#videoGallery h2,
+#infography h2,
+#contact h2 {
+	font-size:3.0em;
+	line-height:1em !important;
+}
+
+#nav li{background-color:white}
+
+
+#LanguageList{
+	position: absolute;
+	right: 20px;
+	padding-top: 200px;}
+
+}
+#nav li{background-color:white}
+#warpbox{width:100px !important;}
+.oneBox .imgwrap {left:0;}
+.oneBox .item_blog { padding-left: 0;}
+.imgwrap {max-width:100% !important; margin:0 !important; }
+#seguimiento .imgwrap {margin-left: -10px !important; margin-right: 10px !important;}
+
+.item_blog { padding-left: 10px;}
+li.staff img{ margin:0 auto 25px auto; float:none; display:block; width:100% !important;}
+
+
+
+
+#wowslider-container5 {
+
+border: 1px solid #810853 !important;
+
+}
+
+.ws-title span{ color:#810853 !important;}
+
+
+#comments, .meta, .container .buttons{display:none;}
+
+.single-myportfoliotype #foliosidebar, .single-myportfoliotype .nav_item{display:none;}
+
+#foliosidebar .tmnf-sc-button {background-color:#831454 !important;}
+#foliosidebar .tmnf-sc-button{  color: white !important;
+    text-shadow: none !important;}
+
+.tmnf-sc-button {background-color:#831454 !important;}
+.tmnf-sc-button span{  color: white !important;
+    text-shadow: none !important;}
+
+#fasesContent .flex-next, #fasesContent .flex-prev , #fasesContent .hoverstuff-zoom, #fasesContent .hoverstuff-link, #fasesContent .cats2 a{display:none;} 
+
+#fasesContent .cats2 h3 a{display:block; font-size:13px;}
+
+#fasesContent .cats2 {color:#831355 !important; height: 50px; margin-top: 30px;}
+
+.showme img{  height: 29px !important;
+    margin-top: 12px; }
+#header .container {  width: 45%;}
+
+#header h1 {left: -280px;}
+#searchContent {  
+	float: right;
+    margin-bottom: 5px;
+    margin-right: 10%;
+    margin-top: 5px; }
+
+#searchsubmit{  background-color: #831355;
+    color: #FFFFFF;
+    font: 12px/1em Arial,sans-serif;}
+
+.search .itemtitle { font-size: 35px; width: 100%; }
+
+.search #searchContent {display:none;}
+
+
+#multimediaContent br{ display:none;}
+#multimediaContent .blockContent{
+    background: none repeat scroll 0 0 white;
+    float: left;
+    height: 175px;
+    margin: 0 0 35px 15px;
+    min-width: 440px;
+    width: 48%;
+}
+
+#multimediaContent li{float:left; width: 100%;}
+
+
+
+#multimediaContent .blockContent div {float:left;}
+
+#multimediaContent .TitleContent
+{
+    padding-top: 30px;
+    text-align: center;
+    width: 180px;
+}
+
+
+#multimediaContent .TitleContent h3{font-size:1.8em}
+
+#multimediaContent #singleContent {padding-top:50px;}
+
+.homeGallery .floatL{  float: left;
+    margin-right: 30px;}
+
+.homeGallery h4{text-align:center;}
+.itemtitle {font.size:3.8em;}
+
+
+
+.single #navigation , .search #navigation{
+    height: 65px;}
+
+
+.single #dynamic-to-top{ display:none !important;}
+
+#navigation .navi,.home #footerHeader  {display:none;}
+.single #footerHeader #navigation .navi, .single #footerHeader { display:block}
+
+span.fl, span.fr {
+font-size: 1.9em;
+    margin-top: 10px;}
+
+#fasesContent .widgetflexslider .slides {margin-left:0 !important; width:100% !important;}
+
+.single .flexslider .slides img {
+    display: block;
+    margin-bottom: 0;
+    max-width: 100%;
+    min-height: 400px;
+    min-width: 650px;
+}
+
+.pp_details .pp_description{display:none !important;}
+
+/*INLINE BLOCKS*/
+#inlineBlocks h2 {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#inlineBlocks div {
+    float: left;
+    margin-left: 30px;
+}
+#inlineBlocks div a {
+    color:white;
+}
+
+/*SLIDERS GALERIA DE FOTOS*/
+
+.postid-3141 .attachment-folio_slider, .postid-3143 .attachment-folio_slider {display:none}
+
+#foliocontent table {width: 920px;}
