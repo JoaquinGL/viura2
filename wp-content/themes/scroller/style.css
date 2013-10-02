@@ -225,7 +225,7 @@ h4.leading{
 
 #header h1.hideme{display: none !important;}
 
-#header img{ float:left; margin:0; height:29px;}
+#header img{ float:left; margin:0; width: 200px;}
 
 .bigmenu h1{ margin:17px 0 !important;}
 

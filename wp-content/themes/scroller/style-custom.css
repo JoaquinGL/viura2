@@ -314,11 +314,11 @@ border: 1px solid #810853 !important;
 
 #fasesContent .cats2 {color:#831355 !important; height: 50px; margin-top: 30px;}
 
-.showme img{  height: 29px !important;
-    margin-top: 12px; }
+
 #header .container {  width: 45%;}
 
-#header h1 {left: -280px;}
+#header {height:100px;}
+
 #searchContent {  
 	float: right;
     margin-bottom: 5px;
