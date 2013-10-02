@@ -199,15 +199,16 @@ h4.leading{
 
 
 #header h1{
-	margin:10px 0;
-	float:left;
-	line-height:.9;
-	font-size:35px;
-	text-transform:uppercase;
-	letter-spacing:-3px;
-	display:block;
-	height:0;
-	opacity:0;
+	display: block !important;
+    float: left;
+    font-size: 35px;
+    height: 0;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    margin: 10px 0;
+    opacity: 1 !important;
+    text-transform: uppercase;
+ 
 
 	-webkit-transition: all 1.1s ease;
     -moz-transition: all 1.1s ease;

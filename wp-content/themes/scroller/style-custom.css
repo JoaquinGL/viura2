@@ -20,7 +20,7 @@
     	width: 100%;}
 
 .stuff,
-#header_bottom{ height:140px; bottom:0px; } /* slider + logo section height */
+#header_bottom{display: none !important; } /* slider + logo section height */
 
 .stuff .flexhead{ height:110px; }
 
