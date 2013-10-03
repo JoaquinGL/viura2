@@ -472,6 +472,7 @@ font-size: 1.9em;
 #Inicio {
     padding-bottom: 0;
 	max-height: 748px;
+	margin-top: 60px;
 }
 
 #Información {padding-top:0;}
@@ -498,8 +499,6 @@ font-size: 1.9em;
     font-size: 0.9em !important;
 }
 
-
-
 #inlineBlocks div
  { 
 	float: left;
@@ -525,16 +524,23 @@ font-size: 1.9em;
 /*Pantallas cuya resolucion es mayor y el tamaño es 1024px*/
 
 @media all and (min-width: 1024px) {
- #inlineBlocks #middle
-{
-	margin-left: 20px; margin-right: 20px;
+#inlineBlocks h2 {
+    font-size: 0.9em !important;
 }
 
 #inlineBlocks div
-{
-	 float: left;
-	margin-bottom: 10px;
+ { 
+	float: left;
+    width: 187px;
 }
+
+#inlineBlocks img {
+    height: 200px;
+}
+
+#inlineBlocks {max-width: 745px;}
+
+#inlineBlocks #middle {margin:0 80px;}
 
 .sixcol {
 	width:32.4%;
@@ -563,7 +569,7 @@ font-size: 1.9em;
 		max-width: 230px;
 		overflow: hidden;
 	}
-	#dynamic-to-top{ width:20px !important;}
+	#dynamic-to-top{ width:20px !important;}inlineBlocks
 }
 
 
