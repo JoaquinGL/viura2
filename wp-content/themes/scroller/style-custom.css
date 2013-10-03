@@ -59,7 +59,7 @@
 #Informacion h2 {font-size:4.0em;  line-height: 1em !important; margin-right: 35px;
     text-align: right;}
 
-
+#Informacion {padding-top:0;}
 
 .section .title-image-over{
   text-align: center; 
@@ -106,7 +106,7 @@
 {
 	position: absolute; 
 	right: 20px;
-	padding-top:12px;
+	padding-top:25px;
 }
 
 #LanguageList li
@@ -322,7 +322,7 @@ border: 1px solid #810853 !important;
 	float: right;
     margin-bottom: 5px;
     margin-right: 10%;
-    margin-top: 5px; }
+    margin-top: 20px; }
 
 #searchsubmit{  background-color: #831355;
     color: #FFFFFF;
@@ -470,8 +470,8 @@ font-size: 1.9em;
 
 
 #Inicio {
-    margin-bottom: -40px;
     padding-bottom: 0;
+	max-height: 748px;
 }
 
 #Información {padding-top:0;}
