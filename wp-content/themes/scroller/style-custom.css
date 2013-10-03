@@ -469,7 +469,12 @@ font-size: 1.9em;
     text-align: right;}
 
 
-#Inicio {margin-top:100px;}
+#Inicio {
+    margin-bottom: -40px;
+    padding-bottom: 0;
+}
+
+#Información {padding-top:0;}
 
 #contact .section_text a{color:#C9B1BF}
 
