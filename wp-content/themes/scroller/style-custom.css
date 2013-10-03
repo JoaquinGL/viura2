@@ -337,31 +337,43 @@ border: 1px solid #810853 !important;
 
 #multimediaContent br{ display:none;}
 #multimediaContent .blockContent{
-    background: none repeat scroll 0 0 white;
+ 	background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #5C5C5C;
+    box-shadow: 0 0 2px #5C5C5C;
     float: left;
-    height: 175px;
-    margin: 0 0 35px 15px;
-    min-width: 440px;
-    width: 48%;
+    margin: 4px;
+    padding: 2px;
 }
 
 #multimediaContent li{float:left; width: 100%;}
 
-
-
-#multimediaContent .blockContent div {float:left;}
-
 #multimediaContent .TitleContent
 {
-    padding-top: 30px;
     text-align: center;
-    width: 180px;
+   width: 220px;
+}
+
+#multimediaContent .TitleContent h3{font-size:1.2em; margin:0;}
+
+#multimediaContent .imgContent img{ width: 220px;}
+
+#multimediaContent .blockContent:hover 
+{
+	background:none repeat scroll 0 0 #5C5C5C;
+	-o-transition:.3s;
+  	-ms-transition:.3s;
+  	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
 }
 
 
-#multimediaContent .TitleContent h3{font-size:1.8em}
+#multimediaContent .blockContent:hover .TitleContent h3 {
+    color:white;
+}
 
-#multimediaContent #singleContent {padding-top:50px;}
+
+
+
 
 .homeGallery .floatL{  float: left;
     margin-right: 30px;}
@@ -402,15 +414,37 @@ font-size: 1.9em;
     text-align: center;
 }
 
+#inlineBlocks div:hover
+{
+	background-color: #C8AEC4;
+	box-shadow: 0 0 5px #850055;
+	-o-transition:.3s;
+  	-ms-transition:.3s;
+  	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
+}
+
+
+#inlineBlocks 
+{
+	margin: 0 auto;
+    max-width: 895px;
+    overflow: hidden;
+}
+
+
+
+
 #inlineBlocks div {
-	 border: 2px solid #C8AEC4;
+	background-color: #850055;
+    border: 2px solid #C8AEC4;
     border-radius: 0 0 0 0;
     box-shadow: 0 0 5px #C8AEC4;
-    float: left;
-    margin-left: 30px;
 }
+
+
 #inlineBlocks div a {
-    color:#000;
+    color:#fff;
 }
 
 #inlineBlocks div a br{display:none;}
@@ -420,3 +454,86 @@ font-size: 1.9em;
 .postid-3141 .attachment-folio_slider, .postid-3143 .attachment-folio_slider {display:none}
 
 #foliocontent table {width: 920px;}
+
+
+.sixcol {
+	margin:0;
+	padding:4px;
+	float:left;
+	background:url("images/transparent-light.png");
+}
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+
+/*Pantallas cuya resolucion es menor y el tamaño es  menor a 1024px*/
+@media all and (max-width: 1024px) {
+
+.sixcol {
+	width:45.4%;
+}
+
+#inlineBlocks h2 {
+    font-size: 0.9em !important;
+}
+
+
+
+#inlineBlocks div
+ { 
+	float: left;
+    width: 187px;
+}
+
+#inlineBlocks img {
+    height: 200px;
+}
+
+#inlineBlocks {max-width: 615px;}
+
+#inlineBlocks #middle {margin:0 20px;}
+
+.container .head {text-align:left !important;}
+
+
+/*Pantallas cuya resolucion es mayor y el tamaño es 1024px*/
+}
+
+@media all and (min-width: 1024px) {
+ #inlineBlocks #middle
+{
+	margin-left: 20px; margin-right: 20px;
+}
+
+#inlineBlocks div
+{
+	 float: left;
+	margin-bottom: 10px;
+}
+
+.sixcol {
+	width:32.4%;
+}
+
+}
+
+
+@media only screen and (max-width: 700px) {
+	
+	
+	#inlineBlocks div
+ { 
+	float: none;
+    margin:20px auto !important;
+}
+
+@media only screen and (max-width: 600px){
+	#multimediaContent
+	{
+		margin: 0 auto;
+		max-width: 230px;
+		overflow: hidden;
+	}
+	
+}
