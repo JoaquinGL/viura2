@@ -55,9 +55,7 @@ small{ line-height:11pt;}
 	background: url(images/line-h.png) 0 0 repeat-x;
 }
 
-.hrlineB{
-	margin-bottom:30px !important;
-}
+
 
 .hrline span,.hrlineB span{
 	width:30px;
@@ -398,7 +396,7 @@ background-image: url(images/icons/minus.png);
 #main, #home{ max-width:1024px; margin:0 auto;}
 
 .section,
-.section_template{ overflow:hidden; padding:0 0; position:relative; z-index:2; background-attachment:fixed; background-position:50% 0; background-repeat:no-repeat;}
+.section_template{ overflow:hidden; position:relative; z-index:2; background-attachment:fixed; background-position:50% 0; background-repeat:no-repeat;}
 
 .section_template{ background-color:#333;}
 

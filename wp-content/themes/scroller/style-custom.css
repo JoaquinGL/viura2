@@ -1,11 +1,10 @@
 .slider_full {display:none;}
 
-#home{ 
-	background:url("http://www.ingenieriawebtv.com/ProyectoViura2/wp-content/uploads/2013/09/viura_1_3.jpg") no-repeat scroll 0 center transparent;
-	background-size:100% auto;
-}
+.ws-title{display:none !important;}
 
 #home .slides{display:none;}
+
+#home {display:none;}
 
 #sismica3D .hoverstuff-link{display:none;}
 
@@ -40,11 +39,10 @@
 /*NAVIGATION*/
 .inversorsContent
 {     
-	margin: 0 auto;
+	margin: 25px auto;
     	overflow: hidden;
-   	width: 85%;
+   	width: 100%;
 	min-height:100px;
-	margin-top:30px;
 }
 
 .inversorsContent li 
@@ -54,7 +52,7 @@
     min-width: 200px;
     width: 30%;
 }
-.inversorsContent img {width:100%;}
+.inversorsContent img {width:80%;}
 
 
 /*TITLE*/
@@ -463,6 +461,20 @@ font-size: 1.9em;
 	background:url("images/transparent-light.png");
 }
 
+
+
+
+#contact .head {color: #FFFFFF;
+    font-size: 3.4em;
+    text-align: right;}
+
+
+#Inicio {margin-top:100px;}
+
+#contact .section_text a{color:#C9B1BF}
+
+#contact .section_text a:hover{color:#fff}
+
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -497,8 +509,12 @@ font-size: 1.9em;
 .container .head {text-align:left !important;}
 
 
-/*Pantallas cuya resolucion es mayor y el tamaño es 1024px*/
+.section{padding: 0;}
+
+
 }
+
+/*Pantallas cuya resolucion es mayor y el tamaño es 1024px*/
 
 @media all and (min-width: 1024px) {
  #inlineBlocks #middle
@@ -515,6 +531,10 @@ font-size: 1.9em;
 .sixcol {
 	width:32.4%;
 }
+
+.section{padding: 35px 0;}
+
+#contact, #contact #container {height:235px;}
 
 }
 
@@ -537,3 +557,5 @@ font-size: 1.9em;
 	}
 	
 }
+
+
