@@ -106,7 +106,8 @@
 {
 	position: absolute; 
 	right: 20px;
-	padding-top:25px;
+	top:32px;
+	z-index: 199;
 }
 
 #LanguageList li
@@ -198,54 +199,8 @@ a[href$="http://wowslider.com"]
 }
 
 
-@media screen and (max-width: 480px) {
-	#Informacion h2 {font-size:2.4em !important;  line-height: 1em !important;}
-#plantaOperaciones h2,
-#pipeline h2, 
-#pipelineExportation h2, 
-#torresElectricas h2, 
-#imagesGallery h2, 
-#videoGallery h2,
-#infography h2,
-#contact h2 {
-	font-size:2.5em !important;
-	line-height:1em !important;
-}
-
-#nav li{background-color:white}
 
 
-#LanguageList{
-	position: absolute;
-	right: 20px;
-	padding-top: 200px;}
-}
-
-.item_blog .imgwrap {
-    margin-bottom: 60px;
-    margin-top: 20px;
-    max-width: 130px !important;
-}
-
-.oneBox .item_blog .imgwrap {
-    margin:0 !important; 
-	left:0;
-    max-width: 100% !important;
-}
-
-@media screen and (max-width: 1024px)
-{
-	#navigation {width:80%;}
-	#header .container {
-    		width: 47%;
-	}
-	#navigation {
-   		width: 520px;
-	}
-	#header h1 {
-    		left: -180px;
-	}
-}
 
 
 
@@ -267,10 +222,7 @@ a[href$="http://wowslider.com"]
 #nav li{background-color:white}
 
 
-#LanguageList{
-	position: absolute;
-	right: 20px;
-	padding-top: 200px;}
+
 
 }
 #nav li{background-color:white}
@@ -314,15 +266,15 @@ border: 1px solid #810853 !important;
 #fasesContent .cats2 {color:#831355 !important; height: 50px; margin-top: 30px;}
 
 
-#header .container {  width: 45%;}
+
 
 #header {height:100px;}
 
 #searchContent {  
-	float: right;
-    margin-bottom: 5px;
-    margin-right: 10%;
-    margin-top: 20px; }
+	 position: absolute;
+    right: 110px;
+    top: 25px;
+    z-index: 200; }
 
 #searchsubmit{  background-color: #831355;
     color: #FFFFFF;
@@ -484,7 +436,11 @@ font-size: 1.9em;
 #contact .section_text a:hover{color:#fff}
 
 
+#searchform #s{
+	margin-top: 2px;
+    width: 80px;}
 
+#logo_res {display:none;}
 
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -540,6 +496,21 @@ font-size: 1.9em;
 	margin-left: 238px;
 }
 
+#Inicio
+{
+	margin-top:105px;
+}
+
+
+#searchContent, #LanguageList {
+
+	top:10px;
+
+}
+
+#navigation {padding-top:50px;}
+
+#nav li a { font-size: 12px !important}
 
 }
 
@@ -608,6 +579,16 @@ font-size: 1.9em;
     margin-left: 0;
 }
 
+#nav {
+    margin-left: 20px;
+    padding-top: 35px;
+
+}
+
+#header {
+    padding-bottom: 34px;
+}
+
 }
 
 
@@ -629,7 +610,70 @@ font-size: 1.9em;
 		max-width: 230px;
 		overflow: hidden;
 	}
-	#dynamic-to-top{ width:20px !important;}inlineBlocks
+	#dynamic-to-top{ width:20px !important;}
+	
+	
+	
+	#searchContent {
+		right: 10px;
+	}
+	
+	#LanguageList { top:60px;}
+	
+
+#nav li a {
+    font-size: 10px !important;
 }
 
+#nav li {width: 75px !important}
+	
+}
+
+
+
+@media screen and (max-width: 480px) {
+	#Informacion h2 {font-size:2.4em !important;  line-height: 1em !important;}
+#plantaOperaciones h2,
+#pipeline h2, 
+#pipelineExportation h2, 
+#torresElectricas h2, 
+#imagesGallery h2, 
+#videoGallery h2,
+#infography h2,
+#contact h2 {
+	font-size:2.5em !important;
+	line-height:1em !important;
+}
+
+#nav li{background-color:white}
+
+
+
+
+.item_blog .imgwrap {
+    margin-bottom: 60px;
+    margin-top: 20px;
+    max-width: 130px !important;
+}
+
+.oneBox .item_blog .imgwrap {
+    margin:0 !important; 
+	left:0;
+    max-width: 100% !important;
+}
+
+#nav {
+    margin-left: -30px;
+	width:320px;
+}
+
+#nav li {width: 65px !important}
+
+#nav li a {
+    font-size: 9px !important;
+}
+
+#header img{margin-left: -60px;}
+
+}
 

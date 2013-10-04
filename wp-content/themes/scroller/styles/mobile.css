@@ -107,7 +107,7 @@ padding:0 0;
 
 #header a img.logo{margin:0 0 30px 0;}
 
-.scroll{ float:right; width:100%;}
+
 
 .flexfull_wrap{ max-height: 580px !important}
 
@@ -121,14 +121,7 @@ padding:0 0;
 
 @media screen and (max-width: 770px){
 
-#header{
-	padding:0 0 25px 0;
-	position: relative !important;
-	top: auto;
-	left: auto;
-	margin:0;
-	float:left;
-}
+
 
 .mainflex,.mainflex_holder,.mainflex_wrap{ position:relative !important;height:900px !important; top:auto; min-height:auto;overflow:hidden;}
 
@@ -144,11 +137,11 @@ padding:0 0;
 
 .stuff p{ width:100%;}
 
-.scroll li a{ font-size:11px !important; padding:10px 8px 7px 8px}
+
 
 .logo_bottom img{ height:70px;}
 
-#navigation h1{ margin:20px 0 5px 0; display:block !important; position:relative; top:auto; opacity:1; overflow:hidden; height:34px !important; float:left;}
+
 
 h2.head,
 p.section_text{ width:100% !important; padding:10px 0 !important; background: none !important;}
@@ -270,8 +263,6 @@ margin:0 auto 30px auto;
 	float:left;
 }
 
-a#logo_res{ display:block; height:auto; float:none;margin:0 auto 10px auto;overflow:hidden; }
-a#logo_res img{ display:block; width:100%; height:auto; overflow:hidden; float:none;margin:10px auto; }
 
 .container_alt,
 .container_block{padding-top:40px !important; margin-bottom:0 !important;}
@@ -282,7 +273,7 @@ a#logo_res img{ display:block; width:100%; height:auto; overflow:hidden; float:n
 	margin-top:40px;
 }
 
-#navigation h1{ display:none !important;}
+
 
 #header_bottom{display:none; visibility:hidden;}
 
@@ -312,8 +303,7 @@ li.staff img{ margin:0 25px 25px 0;}
 
 #navigation{ display:none;}*/
 
-.scroll,
-ul.navi{ padding:20px 0 0 0 !important; float:none;}
+
 
 .scroll>li,
 .navi li{width:100%; text-align:center;}
@@ -340,24 +330,15 @@ li.scrollparent>a{ padding-left:12px !important;}
 
 /*SearchBAR*/
 
-#searchContent #s{  width: 55px; }
-#searchsubmit
-{
-    height: 35px;
-    width: 55px;
-}
 
-#nav{ left:0;
-     width: 100%;;}
 
-#nav li{ left: 0%;  width: 40% !important;   text-align: left;}
 
-#nav li a { font-size: 12px !important;}
+#nav li{ float: left;
+    position: relative; width:90px}
 
-#navigation {
-    width: 300px;
-	display:block !important;
-}
+
+
+
 #navtrigger {display:none !important;}
 
 li.scrollparent {
@@ -365,16 +346,12 @@ li.scrollparent {
     margin-left: -12px;
 }
 
-#LanguageList {
-    padding-top: 50px;
-    position: absolute;
-    right: 20px;
-}
+
 
 #home{background-position:0 0;}
 
 #main {
-    margin-top: -170px;
+    margin-top: -110px;
     overflow: hidden;
     position: relative;
     z-index: 2 !important;
@@ -383,18 +360,6 @@ li.scrollparent {
 .imgContent {width: 0%;}
 
 
-
-a#logo_res img {
-    display: block;
-    float: left;
-    height: auto;
-    margin: 10px auto 10px -15px;
-    overflow: hidden;
-    width: 80%;
-	height:50px;
-}
-
-#searchContent {padding-top:10px; margin-right:0;}
 
 .section > .container > h2, h2.itemtitle {
     font-size: 27pt !important;
@@ -406,10 +371,7 @@ a#logo_res img {
 	text-align:left;
 }
 
-#navigation 
-{
-   max-width: 280px;
-}
+
 
 .entry .fl, .entry .fr { font-size:15px; }
 
@@ -430,26 +392,7 @@ a#logo_res img {
  
 #dynamic-to-top {margin-bottom:20px;}
   
-#navigation h1{ left:0;}
-#navigation 
-{
-    width: 445px;
-}
-#LanguageList
-{
-   padding-top: 60px;
-}
-#searchContent
-{
-   	margin-right: 10px;
-}
-#home {
-	background-position:0 -15px !important;
-}
 
-#home {
-    height: 575px !important;
-}
 .mainflex, .mainflex_holder, .mainflex_wrap {
     height: 575px !important;
 	}
@@ -475,27 +418,8 @@ a#logo_res img {
 
 @media only screen and (max-width: 768px) {
   
-#navigation h1{ left:0;}
-#navigation 
-{
-    width: 445px;
-}
-#LanguageList
-{
-   padding-top: 60px;
-}
-#searchContent
-{
-   	margin-right: 10px;
-}
-#home {
-	background-position:top center;
-}
 
-#home {
-    height: 600px !important;
-}
-.mainflex, .mainflex_holder, .mainflex_wrap {
+ainflex, .mainflex_holder, .mainflex_wrap {
     height: 600px !important;
 	}
 	
@@ -503,8 +427,7 @@ a#logo_res img {
     height: 565px !important;
 }
 
-#main {
-    margin-top: -350px;}
+
 
 .inversorsContent { width: 95%; }
 
@@ -550,7 +473,7 @@ a.hoverstuff-zoom{ display:none; visibility:hidden}
 .section>.container>h2,
 h2.itemtitle{ font-size:30pt; letter-spacing:-2px; width:100%}
 
-#header a img.logo{ display:block; float:none; margin:0 auto 30px auto;}
+
 
 .featuredflex .flex-direction-nav li a {top:21%;}
 

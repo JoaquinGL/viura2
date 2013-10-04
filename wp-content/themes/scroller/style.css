@@ -246,7 +246,7 @@ h4.leading{
 
 .logo_bottom img{ float:right; margin:20px 40px 0 0; overflow:hidden;}
 
-a#logo_res{ display:none; margin:10px auto; width:90%;}
+
 
 /* @navigations - home
 ********************************************************************************************
@@ -254,24 +254,15 @@ a#logo_res{ display:none; margin:10px auto; width:90%;}
 
 #navigation{ width:100%; position:relative; z-index:99; height:50px; padding-top: 20px;}
 
-#navigation h1{ position:absolute; top:0; left:-180px;  height: 60px;}
+#navigation h1{ position:absolute; top:0;  height: 60px;}
 
-ul.scroll,
-ul.navi{list-style: none; position: relative; float: right; display: block; right: 50%; margin:0 !important; overflow:visible;
+#nav{
 
-	-webkit-transition: all 1.1s ease;
-    -moz-transition: all 1.1s ease;
-    -o-transition: all 1.1s ease;
-    transition: all 1.1s ease;
-	}
+	margin-left:220px;
 
-ul.scroll li,
-ul.navi li{position: relative; float: left; display: block; left: 50%;
-	-webkit-transition: all 1.1s ease;
-    -moz-transition: all 1.1s ease;
-    -o-transition: all 1.1s ease;
-    transition: all 1.1s ease;
 }
+
+
 
 
 
@@ -381,7 +372,7 @@ background-image: url(images/icons/minus.png);
 
 .showtrig{ display: block !important; float:none; overflow:hidden;}
 
-.hidenav{ display:none !important;}
+
 
 .shownav{ display: inline-block !important;}
 
