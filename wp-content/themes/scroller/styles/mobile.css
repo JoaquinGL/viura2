@@ -82,7 +82,7 @@ img {
     margin-left: -700px;   /* 50% */
   }
 
-.section .container{padding:30px 2% 80px 2%;}
+.section .container{padding: 80px 0;}
 
 
 .widgetflexslider .flex-direction-nav li .flex-next {right:-15px;}
