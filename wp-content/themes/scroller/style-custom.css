@@ -442,6 +442,19 @@ font-size: 1.9em;
 
 #logo_res {display:none;}
 
+
+#Informacion .section_text 
+{
+	width:47%;
+}
+
+#fasesContent .container, 
+#seguimiento .container, 
+#gallery .container
+{
+	max-width: 1024px ;
+}
+
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -524,16 +537,17 @@ font-size: 1.9em;
 #inlineBlocks div
  { 
 	float: left;
-    width: 187px;
+    width: 200px;
 }
 
 #inlineBlocks img {
-    height: 200px;
+    height: 195px;
+    width: 200px;
 }
 
-#inlineBlocks {max-width: 745px;}
+#inlineBlocks {max-width: 1024px;}
 
-#inlineBlocks #middle {margin:0 80px;}
+#inlineBlocks #middle {margin:0 205px;}
 
 .sixcol {
 	width:32.4%;
