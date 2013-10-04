@@ -573,9 +573,15 @@ font-size: 1.9em;
 
 
 #multimediaContent .blockContent{
-    margin-left: 2.9%;
+    margin-left: 3.9%;
 
 }
+
+#multimediaContent .blockContent:nth-child(1)
+{
+	margin-left: 0;
+}
+
 
 }
 
