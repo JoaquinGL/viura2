@@ -22,7 +22,7 @@ jQuery(document).ready(function () {
         }
     });
     jQuery(window).scroll(function () {
-        if (jQuery(this).scrollTop() > 700) {
+        if (jQuery(this).scrollTop() > 600) {
             jQuery("#header h1").addClass("showme");
             jQuery("#nav").addClass("nav_classic")
         } else {
@@ -33,7 +33,7 @@ jQuery(document).ready(function () {
     jQuery(function () {
         var e = jQuery("body").offset().top;
         var t = function () {
-            var t = jQuery(window).scrollTop() > 701;
+            var t = jQuery(window).scrollTop() > 601;
             if (t > e) {
                 jQuery("#nav").addClass("nav_classic");
                 jQuery("#header img").fadeIn()
@@ -74,7 +74,7 @@ jQuery(document).ready(function () {
         jQuery(this).toggleClass("active");
         return false
     });
-    var e = 100,
+    var e = 80,
         t = 500,
         n = jQuery(".stuff,#header_bottom,.section_template h2");
     jQuery(window).bind("scroll", function () {
