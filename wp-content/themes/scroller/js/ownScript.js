@@ -74,7 +74,7 @@ jQuery(document).ready(function () {
         jQuery(this).toggleClass("active");
         return false
     });
-    var e = 80,
+    var e = 100,
         t = 500,
         n = jQuery(".stuff,#header_bottom,.section_template h2");
     jQuery(window).bind("scroll", function () {
