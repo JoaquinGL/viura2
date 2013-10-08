@@ -457,6 +457,25 @@ font-size: 1.9em;
 	max-width: 1024px ;
 }
 
+
+
+/*FOOTER*/
+
+#footerHeader #main-nav
+{
+	display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 70px;
+}
+
+#footerHeader
+{
+	overflow: hidden;
+    width: 100%;
+}
+
+
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
