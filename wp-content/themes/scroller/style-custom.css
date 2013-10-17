@@ -483,7 +483,25 @@ font-size: 1.9em;
     transition: opacity 1s ease 0s;
 }
 
+.page-id-3304 #menu-item-3038{ display:none;}
 
+.page-id-3304 #sidebar {display:none;}
+.page-id-3304 .eightcol {width:100%}
+
+
+#fasesContent
+{
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(211, 196, 209, 0.55) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+}
+
+#seguimiento
+{
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(195, 208, 219, 0.55) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+}
+
+#gallery{
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 217, 213, 0.55) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+}
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
