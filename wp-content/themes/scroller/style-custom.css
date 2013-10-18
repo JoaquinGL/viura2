@@ -491,16 +491,16 @@ font-size: 1.9em;
 
 #fasesContent
 {
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(211, 196, 209, 0.55) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(211, 196, 209, 0.7) 40%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
 }
 
 #seguimiento
 {
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(195, 208, 219, 0.55) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(195, 208, 219, 0.75) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
 }
 
 #gallery{
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 217, 213, 0.55) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 217, 213, 0.75) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
 }
 
 .tmnf-sc-twitter
@@ -617,7 +617,7 @@ font-size: 1.9em;
 	width: 32.55%;
 }
 
-.section{padding: 35px 0;}
+.section{padding: 0 0 60px 0;}
 
 #contact, #contact #container {height:235px;}
 
