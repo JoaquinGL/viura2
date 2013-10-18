@@ -489,24 +489,33 @@ font-size: 1.9em;
 .page-id-3304 .eightcol {width:100%}
 
 
-#fasesContent
+
+
+#fasesContent .container
 {
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(211, 196, 209, 0.7) 40%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(113, 0, 85, 0.4) 12%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -50px rgba(255, 255, 255, 0);	
+	border-bottom:1px solid #C8AEC4;
 }
 
-#seguimiento
+#seguimiento .container
 {
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(195, 208, 219, 0.75) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(183, 217, 244, 0.8) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -50px rgba(255, 255, 255, 0);
+	border-bottom:1px solid #C8AEC4;
 }
 
-#gallery{
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 217, 213, 0.75) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+#gallery .container
+{
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 198, 192, 0.8) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	border-bottom:1px solid #C8AEC4;
 }
 
 .tmnf-sc-twitter
 {
  display:none;
 }
+
+.section{padding: 0 0 60px 0;}
+
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -545,7 +554,7 @@ font-size: 1.9em;
 .container .head {text-align:left !important;}
 
 
-.section{padding: 0;}
+
 
 
 #seguimiento .loop li:nth-child(3)
@@ -617,7 +626,7 @@ font-size: 1.9em;
 	width: 32.55%;
 }
 
-.section{padding: 0 0 60px 0;}
+
 
 #contact, #contact #container {height:235px;}
 
