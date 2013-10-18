@@ -499,13 +499,13 @@ font-size: 1.9em;
 
 #seguimiento .container
 {
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(183, 217, 244, 0.8) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -50px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(183, 217, 244, 0.8) 30%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% 50% rgba(255, 255, 255, 0);
 	border-bottom:1px solid #C8AEC4;
 }
 
 #gallery .container
 {
-	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 198, 192, 0.8) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% -69px rgba(255, 255, 255, 0);
+	background: radial-gradient(ellipse farthest-corner at center center , rgba(237, 198, 192, 0.8) 35%, rgba(255, 255, 255, 0) 100%) repeat scroll 50% 50% rgba(255, 255, 255, 0);
 	border-bottom:1px solid #C8AEC4;
 }
 
